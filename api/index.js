@@ -1,16 +1,20 @@
-import  connectionDB  from './config/db.js'; // Importa la función para conectar a la base de datos
-import { getAllUsers } from './controller/userController.js'; // Importa la función desde el controlador
+import express from 'express';
+import connectionDB from './config/db.js'; // Función para conectar a la base de datos
+import userRoute from './routes/userRoute.js'; // Rutas de usuarios
+
+const app = express();
 
 // Conectar a la base de datos
 connectionDB();
 
-// Realizar la consulta usando el controlador
-getAllUsers((error, results) => {
-  if (error) {
-    console.error('Error al obtener usuarios:', error);
-    return;
-  }
-  
-  // Mostrar los resultados de la consulta
-  console.log('Usuarios obtenidos:', results);
+// Middleware para parsear JSON
+app.use(express.json());
+
+// Usar las rutas de usuarios con el prefijo /api/users
+app.use('/api/users', userRoute);
+
+// Iniciar el servidor
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
