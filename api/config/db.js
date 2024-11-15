@@ -17,7 +17,7 @@ const connectionDB = async () => {
       }
       console.log('Conectado a MySQL con ID:', connection.threadId);
     });
-  } catch (error) {
+  } catch (error) { 
     console.log(error);
   }
 };
