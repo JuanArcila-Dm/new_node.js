@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* PANTALLA PRINCIPAL */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
@@ -15,6 +14,18 @@
     --button-text: #fff;
 }
 
+.fondo {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)), 
+                url(/Proyecto_actualizado-main/view/imagenes/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%; 
+    height: 100vh;
+}
+
+/* ------------------------PANTALLA PRINCIPAL--------------------------- */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -68,6 +79,7 @@ footer p {
     justify-content: space-between;
     padding: 0.5em 4px;
     overflow: hidden;
+    margin-block-end: 0.2%;
 }
 
 .navbar a {
@@ -177,15 +189,33 @@ footer p {
     border-bottom: 2px solid var(--primary-color);
 }
 
-.info {
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 1em;
-    background-color: #b4afaf;
 }
 
-.info p {
-    margin: 0.5em 0;
+footer .info {
+    margin-bottom: 15px;
 }
+
+footer .social-media img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+footer a {
+    color: #ffa500;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 
 .carrito {
     display: flex;
@@ -218,37 +248,38 @@ footer p {
     max-width: 600px;
     height: 450px;
 }
-/* INICIO SESION */
+
+.btn-regresar img {
+    width: 45px;
+    height: 45px;
+}
+
+.btn-regresar {
+    margin-inline-end: 35%;
+    border: none;
+    display: flex;
+    background-color: rgba(192, 192, 192, 0.0);
+}
+/*----------------------------------- INICIO SESION --------------------------*/
 .iniciarSesion {
     display: flex;
+    flex-direction: row;
     text-align: center;
-    flex-direction: column;
-    background-color: darkgray;
+    background-color: rgba(192, 192, 192, 0.9);
     padding: 2%;
 }
 
 .inicioSesion {
-    border-style: double;
+    border-radius: 0%;
+    border-style: solid;
     display: flex;
     text-align: center;
     flex-direction: column;
     margin: 10%;
     margin-left: 20%;
     margin-right: 20%;
-    padding: 1%;
+    padding: 2%;
     background-color: rgb(200, 197, 197);
-}
-
-.cliente {
-    padding: 1%;
-    justify-content: center;
-    flex-direction: row
-} 
-
-.admin {
-    margin-block-end: 1%;
-    justify-content: center;
-    flex-direction: row
 }
 
 .correo {
@@ -263,39 +294,37 @@ footer p {
 .bt-iniciar {
     background-color: black;
     color: white;
-    padding-block-end: 1%;
     margin-bottom: 2%;
 }
 
 .bt-registrarse {
     background-color: black;
     color: white;
-    padding-block-end: 1%;
-    margin-bottom: 1%;
 }
 
 .bt-recuperarC {
-    color: blue;
-    padding-right: 82%;
-    border-color: rgb(200, 197, 197);
+    color: black;
+    padding-right: 80%;
     background-color: rgb(200, 197, 197);
     border: none;
+    
 }
-/* REGISTRARSE */
+
+/*-------------------------------- REGISTRARSE --------------------------*/
 .registrarse {
     display: flex;
+    flex-direction: row;
     text-align: center;
-    flex-direction: column;
-    background-color: darkgray;
+    background-color: rgba(192, 192, 192, 0.9);
     padding: 2%;
 }
 
 .p-registrarse{
-    border-style: double;
+    border-style: solid;
     display: flex;
     text-align: center;
     flex-direction: column;
-    margin: 10%;
+    margin: 5%;
     margin-left: 20%;
     margin-right: 20%;
     padding: 2%;
@@ -318,17 +347,67 @@ footer p {
     padding: 2%;
     margin-block-end: 2%;
 }
-/* RECUPERAR CONTRASEÑA */
-.rContraseña {
+/*------------------ VERIFICACIÓN DE CORREO #1-------------------------*/
+
+.verificacionC1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgba(192, 192, 192, 0.9);
+    padding: 2%;
+}
+
+.verificacionCorreo {
+    border-style: solid;
     display: flex;
     text-align: center;
     flex-direction: column;
-    background-color: darkgray;
+    margin: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2%;
+    background-color: rgb(200, 197, 197);
+}
+
+.verificacionCorreo h5 {
+    display: flex;
+    margin-block-end: 5%;
+    flex-direction: row
+}
+
+.btVerificar {
+    background-color: black;
+    color: white;
+    margin-block-start: 2%;
+}
+
+/*------------------ VERIFICACIÓN DE CORREO #2-------------------------*/
+.verificacionC2 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgba(192, 192, 192, 0.9);
+    padding: 2%;
+}
+
+.verificacionCorreo h3 {
+    display: flex;
+    margin-block-end: 5%;
+    flex-direction: column;
+    padding: 5%;
+}
+
+/*-------------------- RECUPERAR CONTRASEÑA--------------------------- */
+.rContraseña {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgba(192, 192, 192, 0.9);
     padding: 2%;
 }
 
 .recuperarContraseña {
-    border-style: double;
+    border-style: solid;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -349,5 +428,85 @@ footer p {
     margin-left: 2%;
     background-color: rgb(200, 197, 197);
     border: none;
+    margin-block-end: 1%;
+}
+
+.recuperar {
+    margin-block-start: 3%;
+    background-color: black;
+    color: white;
+}
+
+.recuperar3 {
+    background-color: black;
+    color: white;
+    padding: 1%;
+}
+
+/* ------------------ DESCRIPCION PRODUCTO ----------------------- */
+.descripcionPro {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: darkgray;
+    padding: 2%;
+}
+
+.infoP {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(200, 197, 197);
+    margin-top: 2%;
+    padding: 2%;
+    margin-block: 5%;
+}
+
+.nombreP {
+    display: flex;
+    justify-content: flex-end
+}
+
+.descripcionP {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end
+}
+
+.precio {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.precio h6 {
+    color: green;
+}
+
+.img {
+    width: 50%;
+    border: 3px solid black;
+}
+
+.imgP {
+    display: flex;
+    margin-right: 12%;
+}
+
+.contenidoD {
+    display: flex;
+    margin-block-end: 15%;
+    margin-inline-start: -50%;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.precio {
+    margin: 0%;
+}
+
+.puntuacionP {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
