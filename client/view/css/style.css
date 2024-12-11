@@ -17,6 +17,7 @@
 .fondo {
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)), 
                 url(/new_node.js-master/client/view/imagenes/fondo3.jpg);
+                url(/Proyecto_actualizado-main/view/imagenes/fondo3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -212,12 +213,27 @@ footer a {
     margin: 0 10px;
 }
 
+}
+
+footer .social-media img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+footer a {
+    color: #ffa500;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
 footer a:hover {
     text-decoration: underline;
 }
 
 
 .carrito-btn {
+.carrito {
     display: flex;
     flex-direction: column;
     padding: 1%;
@@ -272,6 +288,11 @@ footer a:hover {
     justify-content: center;
     width: 100%;
 }
+    margin-inline-end: 35%;
+    border: none;
+    display: flex;
+    background-color: rgba(192, 192, 192, 0.0);
+}
 /*----------------------------------- INICIO SESION --------------------------*/
 .iniciarSesion {
     display: flex;
@@ -315,6 +336,7 @@ footer a:hover {
 }
 
 .btn-recuperarC {
+.bt-recuperarC {
     color: black;
     padding-right: 80%;
     background-color: rgb(200, 197, 197);
@@ -388,6 +410,7 @@ footer a:hover {
 }
 
 .btn-Verificar {
+.btVerificar {
     background-color: black;
     color: white;
     margin-block-start: 2%;
@@ -441,6 +464,85 @@ footer a:hover {
     background-color: rgb(200, 197, 197);
     border: none;
     margin-block-end: 1%;
+}
+
+.recuperar {
+    margin-block-start: 3%;
+    background-color: black;
+    color: white;
+}
+
+.recuperar3 {
+    background-color: black;
+    color: white;
+    padding: 1%;
+}
+
+/* ------------------ DESCRIPCION PRODUCTO ----------------------- */
+.descripcionPro {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: darkgray;
+    padding: 2%;
+}
+
+.infoP {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(200, 197, 197);
+    margin-top: 2%;
+    padding: 2%;
+    margin-block: 5%;
+}
+
+.nombreP {
+    display: flex;
+    justify-content: flex-end
+}
+
+.descripcionP {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end
+}
+
+.precio {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.precio h6 {
+    color: green;
+}
+
+.img {
+    width: 50%;
+    border: 3px solid black;
+}
+
+.imgP {
+    display: flex;
+    margin-right: 12%;
+}
+
+.contenidoD {
+    display: flex;
+    margin-block-end: 15%;
+    margin-inline-start: -50%;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.precio {
+    margin: 0%;
+}
+
+.puntuacionP {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .btn-recuperar {
