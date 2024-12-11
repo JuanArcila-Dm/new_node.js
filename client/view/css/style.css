@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* PANTALLA PRINCIPAL */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
@@ -15,6 +14,18 @@
     --button-text: #fff;
 }
 
+.fondo {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)), 
+                url(/new_node.js-master/client/view/imagenes/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%; 
+    height: 100vh;
+}
+
+/* ------------------------PANTALLA PRINCIPAL--------------------------- */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -68,6 +79,7 @@ footer p {
     justify-content: space-between;
     padding: 0.5em 4px;
     overflow: hidden;
+    margin-block-end: 0.2%;
 }
 
 .navbar a {
@@ -82,7 +94,7 @@ footer p {
     transform: translateY(-2px);
 }
 
-.inSesion {
+.btn-inSesion {
     background-color: var(--bs-btn-bg);
     color: var(--bg-color);
     border: none;
@@ -177,17 +189,35 @@ footer p {
     border-bottom: 2px solid var(--primary-color);
 }
 
-.info {
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    padding: 1em;
-    background-color: #b4afaf;
 }
 
-.info p {
-    margin: 0.5em 0;
+footer .info {
+    margin-bottom: 15px;
 }
 
-.carrito {
+footer .social-media img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+footer a {
+    color: #ffa500;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+.carrito-btn {
     display: flex;
     flex-direction: column;
     padding: 1%;
@@ -218,37 +248,50 @@ footer p {
     max-width: 600px;
     height: 450px;
 }
-/* INICIO SESION */
+
+.btn-regresar img {
+    width: 45px;
+    height: 45px;
+}
+
+.btn-regresar {
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: rgba(192, 192, 192, 0.0);
+}
+
+.botones-atras {
+    display: flex;
+    width: 0%;
+    justify-content: center;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/*----------------------------------- INICIO SESION --------------------------*/
 .iniciarSesion {
     display: flex;
+    flex-direction: row;
     text-align: center;
-    flex-direction: column;
-    background-color: darkgray;
+    background-color: rgba(192, 192, 192, 0.9);
     padding: 2%;
 }
 
 .inicioSesion {
-    border-style: double;
+    border-radius: 0%;
+    border-style: solid;
     display: flex;
     text-align: center;
     flex-direction: column;
     margin: 10%;
     margin-left: 20%;
     margin-right: 20%;
-    padding: 1%;
+    padding: 2%;
     background-color: rgb(200, 197, 197);
-}
-
-.cliente {
-    padding: 1%;
-    justify-content: center;
-    flex-direction: row
-} 
-
-.admin {
-    margin-block-end: 1%;
-    justify-content: center;
-    flex-direction: row
 }
 
 .correo {
@@ -260,42 +303,40 @@ footer p {
     padding-block-end: 3%;
 }
 
-.bt-iniciar {
+.btn-iniciar {
     background-color: black;
     color: white;
-    padding-block-end: 1%;
     margin-bottom: 2%;
 }
 
-.bt-registrarse {
+.btn-registrarse {
     background-color: black;
     color: white;
-    padding-block-end: 1%;
-    margin-bottom: 1%;
 }
 
-.bt-recuperarC {
-    color: blue;
-    padding-right: 82%;
-    border-color: rgb(200, 197, 197);
+.btn-recuperarC {
+    color: black;
+    padding-right: 80%;
     background-color: rgb(200, 197, 197);
     border: none;
+    
 }
-/* REGISTRARSE */
+
+/*-------------------------------- REGISTRARSE --------------------------*/
 .registrarse {
     display: flex;
+    flex-direction: row;
     text-align: center;
-    flex-direction: column;
-    background-color: darkgray;
+    background-color: rgba(192, 192, 192, 0.9);
     padding: 2%;
 }
 
 .p-registrarse{
-    border-style: double;
+    border-style: solid;
     display: flex;
     text-align: center;
     flex-direction: column;
-    margin: 10%;
+    margin: 5%;
     margin-left: 20%;
     margin-right: 20%;
     padding: 2%;
@@ -318,17 +359,67 @@ footer p {
     padding: 2%;
     margin-block-end: 2%;
 }
-/* RECUPERAR CONTRASEÑA */
-.rContraseña {
+/*------------------ VERIFICACIÓN DE CORREO #1-------------------------*/
+
+.verificacionC1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgba(192, 192, 192, 0.9);
+    padding: 2%;
+}
+
+.verificacionCorreo {
+    border-style: solid;
     display: flex;
     text-align: center;
     flex-direction: column;
-    background-color: darkgray;
+    margin: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2%;
+    background-color: rgb(200, 197, 197);
+}
+
+.verificacionCorreo h5 {
+    display: flex;
+    margin-block-end: 5%;
+    flex-direction: row
+}
+
+.btn-Verificar {
+    background-color: black;
+    color: white;
+    margin-block-start: 2%;
+}
+
+/*------------------ VERIFICACIÓN DE CORREO #2-------------------------*/
+.verificacionC2 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgba(192, 192, 192, 0.9);
+    padding: 2%;
+}
+
+.verificacionCorreo h3 {
+    display: flex;
+    margin-block-end: 5%;
+    flex-direction: column;
+    padding: 5%;
+}
+
+/*-------------------- RECUPERAR CONTRASEÑA--------------------------- */
+.rContraseña {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgba(192, 192, 192, 0.9);
     padding: 2%;
 }
 
 .recuperarContraseña {
-    border-style: double;
+    border-style: solid;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -344,10 +435,231 @@ footer p {
     margin-left: 2%;
 }
 
-.reenviar {
+.btn-reenviar {
     display: flex;
     margin-left: 2%;
     background-color: rgb(200, 197, 197);
     border: none;
+    margin-block-end: 1%;
 }
+
+.btn-recuperar {
+    margin-block-start: 3%;
+    background-color: black;
+    color: white;
+}
+
+.btn-recuperar3 {
+    background-color: black;
+    color: white;
+    padding: 1%;
+}
+
+/* ------------------ DESCRIPCION PRODUCTO ----------------------- */
+.descripcionPro {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: darkgray;
+    padding: 2%;
+}
+
+.infoP {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(200, 197, 197);
+    margin-top: 2%;
+    padding: 2%;
+    margin-block: 5%;
+}
+
+.nombreP {
+    display: flex;
+    justify-content: flex-end
+}
+
+.descripcionP {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end
+}
+
+.precio {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.precio h6 {
+    color: green;
+}
+
+.img {
+    width: 50%;
+    border: 3px solid black;
+}
+
+.imgP {
+    display: flex;
+    margin-right: 12%;
+}
+
+.contenidoD {
+    display: flex;
+    margin-block-end: 15%;
+    margin-inline-start: -50%;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.precio {
+    margin: 0%;
+}
+
+.puntuacionP {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* ------------------ CARRITO DE COMPRAS ----------------------- */
+
+.carrito {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: darkgray;
+    padding: 2%;
+}
+
+.btn-añadirCarrito {
+    background-color: black;
+    color: var(--button-text);
+    margin-bottom: 1%;
+}
+
+.btn-verCarrito {
+    background-color: black;
+    color: var(--button-text);
+}
+
+.producto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgb(200, 197, 197);
+    margin-top: 2%;
+    padding: 2%;
+    margin-block: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 50px;
+}
+
+.producto img {
+    width: 50%;
+    height: auto;
+}
+
+.producto .description {
+    padding: 10px;
+    text-align: center;
+    display: block; 
+}
+
+.producto .description h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    font-weight: 700;
+}
+
+.producto .description p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.producto .price {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.producto .cantidad {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.producto .total {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.producto .eliminar {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.btn-eliminar {
+    border: none;
+    background-color: rgb(200, 197, 197);
+    width: 10%;
+    height: 20%;
+    margin-inline-start: 192%;
+    margin-block-start: 18%;
+}
+
+.btn-eliminar img {
+    width: 30px;
+    height: 30px;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total p {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+
+.campoTotal {
+    background-color: rgb(200, 197, 197);
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 60px;
+    margin-block-end: 5%;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-block-end: 5%;
+}
+
+.btn-comprar {
+    background-color: black;
+    color: white;
+    margin-block-end: 5%;
+    width: 40%;
+    margin-inline-end: 1%;
+}
+
+.btn-vaciar {
+    background-color: black;
+    color: white;
+    margin-block-end: 5%;
+    width: 40%;
+    margin-inline-start: 1%;
+}
+
+
+
+
+
+
 
